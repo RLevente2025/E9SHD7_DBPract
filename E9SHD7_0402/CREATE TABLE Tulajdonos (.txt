@@ -1,0 +1,38 @@
+CREATE TABLE Tulajdonos (
+Ekod CHAR(3) PRIMARY KEY,
+Nev VARCHAR(50) NOT NULL,
+Varos VARCHAR(50),
+Telefon VARCHAR(20));
+sqlite> .tables Tulajdonos
+
+CREATE TABLE Auto (
+Rendszam VARCHAR(50) PRIMARY KEY,
+Tipus VARCHAR(50) NOT NULL,
+Szín VARCHAR(30),
+Kor INT,
+Ar INT,
+Tulaj CHAR(3),
+FOREIGN KEY (Tulaj) REFERENCES Tulajdonos(Ekod)
+);
+
+INSERT INTO Tulajdonos values ('100','Kis János','Eger',209555666);
+Begin
+INSERT INTO Tulajdonos values ('101','Kis János','Szerencs', 2095556666);
+INSERT INTO Tulajdonos values ('102','Kis Éva','Szerencs', 308764432);
+
+
+
+begin
+INSERT INTO Auto VALUES ('FER-831','Opel Corsa','Piros',18,390,100);
+INSERT INTO Auto VALUES ('GDF-525','Renault Twingo','Fekete', 16, 280, 101);
+INSERT INTO Auto VALUES ('HUB-936',
+INSERT INTO Auto VALUES
+INSERT INTO Auto VALUES
+INSERT INTO Auto VALUES
+INSERT INTO Auto VALUES
+INSERT INTO Auto VALUES
+INSERT INTO Auto VALUES
+
+
+
+select*from Tulajdonos;
